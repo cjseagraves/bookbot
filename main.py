@@ -11,9 +11,13 @@ def main():
     file_contents = get_book_text("books/frankenstein.txt")
     num_words= get_num_words(file_contents)
     character_count = get_character_count(file_contents)
-    print(f"{num_words} words found in the document")
-    print(character_count)
-    print(f"sorted list is {sort_the_list(character_count)}")
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {num_words} total words")
+    print("--------- Character Count -------")
+    for i in sort_the_list(character_count):
+        print(f"{i['char']}: {i['count']}")
 
 
 

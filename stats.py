@@ -14,7 +14,6 @@ def get_char_list(character_count):
     char_list = []
     for k in character_count:
         char_list.append({"char": k, "count": character_count[k]})
-    #print(f"char list is {char_list}")
     return char_list
 
 def get_count(item):
@@ -22,5 +21,4 @@ def get_count(item):
 def sort_the_list(character_count):
     sorted_list = get_char_list(character_count)
     sorted_list.sort(key=get_count, reverse=True)
-    print(f"sorted_list {type(sorted_list)}")
     return sorted_list
