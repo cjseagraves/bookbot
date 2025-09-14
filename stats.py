@@ -9,3 +9,18 @@ def get_character_count(file_contents):
         else:
             character_count[character] = 1
     return character_count
+
+def get_char_list(character_count):
+    char_list = []
+    for k in character_count:
+        char_list.append({"char": k, "count": character_count[k]})
+    #print(f"char list is {char_list}")
+    return char_list
+
+def get_count(item):
+        return item["count"]
+def sort_the_list(character_count):
+    char_list = get_char_list(character_count)
+    for i in get_char_list(character_count):
+        sorted_list = char_list.sort(key=get_count, reverse=True)
+    return sorted_list
