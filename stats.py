@@ -4,9 +4,9 @@ def get_num_words(file_contents):
 def get_character_count(file_contents):
     character_count = {}
     for character in file_contents.lower():
-        if character in character_count:
+        if character.isalpha() and character in character_count:
             character_count[character] += 1
-        else:
+        elif character.isalpha():
             character_count[character] = 1
     return character_count
 
@@ -20,7 +20,7 @@ def get_char_list(character_count):
 def get_count(item):
         return item["count"]
 def sort_the_list(character_count):
-    char_list = get_char_list(character_count)
-    for i in get_char_list(character_count):
-        sorted_list = char_list.sort(key=get_count, reverse=True)
+    sorted_list = get_char_list(character_count)
+    sorted_list.sort(key=get_count, reverse=True)
+    print(f"sorted_list {type(sorted_list)}")
     return sorted_list
