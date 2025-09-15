@@ -8,13 +8,11 @@ def get_book(sys_argv):
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
     book = sys_argv[1]
-    print(f"received book path: {book}")
     return book
 
 def get_book_text(book):
     with open(book) as f:
         file_contents = f.read()
-    print(f"analyzing contents from {book}...")
     return file_contents
 
 def main():
